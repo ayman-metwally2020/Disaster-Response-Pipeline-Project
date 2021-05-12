@@ -16,11 +16,14 @@ from sklearn.metrics import classification_report
 from sklearn.tree import DecisionTreeClassifier
 import pickle
 
+
 def load_data(database_filepath):
     """Load the filepath and return the data"""
     name = 'sqlite:///' + database_filepath
     engine = create_engine(name)
-    df = pd.read_sql_table('FigureEight', con=engine) # is table always called this? 
+    df = pd.read_sql_table('DisasterResponse', con=engine) # is table always called this?
+    #engine = create_engine('sqlite:///'+ database_filepath)
+    #df = pd.read_sql_table('df', engine)
     print(df.head())
     X = df['message']
     y = df[df.columns[4:]]
