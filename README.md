@@ -12,3 +12,5 @@
     python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
 3. Go to http://0.0.0.0:3001/
+
+4- https://view6914b2f4-3001.udacity-student-workspaces.com/
